@@ -16,7 +16,7 @@ Maybe you have some dependencies you want downloaded/installed before your `auto
 This is especially handy when placed in an `autorunonce.sh` script.
 ```
 pirateship defaults
-pirateship adapter <wifi name> WPA <wifi password>
+pirateship adapter <wifi name> <wifi password> WPA
 ifdown wlan0
 ifup wlan0
 ```
