@@ -13,7 +13,7 @@ Have some code you want to run on boot without having to mess with init.d/system
 Maybe you have some dependencies you want downloaded/installed before your `autorun.sh` starts running. Place that code in `autorunonce.sh`. When Pirateship for Pi finishes running that code, it will move that code to `autoranonce.sh` so that it doesn't run on the next boot by accident. 
 
 ### Need to connect to WiFi? Pirateship CLI has your back.
-This is especially handy when placed in an `autorunonce.sh` script.
+To connect a Pi running Pirateship to a WiFi network, make a text file named `autorunonce.sh` with the following snippet in it, edit it by adding your own wifi name and password, put the file on a USB Drive, plug the USB drive into your Pi running Pirateship, and then power on your Pi. 
 ```
 pirateship defaults
 pirateship adapter <wifi name> WPA <wifi password>
