@@ -15,8 +15,8 @@ Maybe you have some dependencies you want downloaded/installed before your `auto
 ### Need to connect to WiFi? Pirateship CLI has your back.
 To connect a Pi running Pirateship to a WiFi network, make a text file named `autorunonce.sh` with the following snippet in it, edit it by adding your own wifi name and password, put the file on a USB Drive, plug the USB drive into your Pi running Pirateship, and then power on your Pi. 
 ```
-pirateship defaults
-pirateship adapter <wifi name> WPA <wifi password>
+pirateship default
+pirateship adapter <wifi name> <wifi password> WPA
 ifdown wlan0
 ifup wlan0
 ```
