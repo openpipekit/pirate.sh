@@ -20,4 +20,14 @@ pirateship adapter <wifi name> <wifi password> WPA
 ifdown wlan0
 ifup wlan0
 ```
+
+... or if you don't have a WiFi password...
+
+```
+pirateship default
+pirateship adapter <wifi name> "" none
+ifdown wlan0
+ifup wlan0
+```
+
 That's all you need to do to reset your connection, configure for your network, and then cycle the WiFi dongle. From there on out those settings will be saved and the connection will be reestablished between boots. 
