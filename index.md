@@ -5,6 +5,11 @@ A Raspberry Pi image for making deployment of Ground Servers a breeze in your sa
 
 Download the latest Pirateship disk image for Raspberry Pi [[zip](http://pirate.sh/latest-pirateship.img.zip)] [[gz](http://pirate.sh/latest-pirateship.img.gz)]
 
+To install, download the latest image from the link above and then follow the directions to burn that disk image onto an SD Card. 
+- [Windows](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
+- [Mac](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
+- [Linux](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
+
 ## Features
 ### Run code on boot off of a USB Drive with `autorun.sh`
 Have some code you want to run on boot without having to mess with init.d/systemd/etc? Create a file named `autorun.sh` on a USB Drive, plug it into your Pi running Pirateship for Pi, and you're good to go.
