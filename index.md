@@ -36,3 +36,18 @@ ifup wlan0
 ```
 
 That's all you need to do to reset your connection, configure for your network, and then cycle the WiFi dongle. From there on out those settings will be saved and the connection will be reestablished between boots. 
+
+### Debugging
+Is something in your `autorun.sh` not working as expected? Then it's time to dive in on the command line. We suggest connecting computers to Pis over Console Cables as opposed to finding the Pi on the network. [Adafruit has an excellent tutorial on this](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable/overview).  
+
+
+Now that you're logged into your Pi, `sudo su` to become the root user, and run `screen -x` to enter the screen session where `autorun.sh` is executing. There you will see the output of the process. Inspect the output for any error messages. If you are building a pipe with pull and push commands, try running the pull and push commands seperately to confirm that both work. For example...
+
+```
+$ ./my-sensor-driver/pull
+42
+$ echo '42' | ./my-database-driver/push
+You pushed the value 42 to your database
+```
+
+If your database driver is pushing data to the Internet, check to make sure the Pi is connected to the Internet.  The first command to try is `ping google.com`. If you see responses from Google then you are all set. If you see timeouts however, run `ifconfig` to see the current configuration of your network cards. If you are connected over a hardwire ethernet, pay attention to the `eth0` adapter. If you are connected over WiFi USB, pay attention to the `wlan0` adapter. What you're looking for is if your network card has been given an IP Address on the network it should be connected to. The IP Address will look something like `192.168.0.104` but may be different depending on your network configuration. If you don't have an IP Address, then the Router your Pi is connected to may be down or there may be some invalid network settings on your Pi. Try cycling the network card by running `ifdown <adapter name>; ifup <adapter name>;`. If your network settings are invalid you should see an error message, if the Router is not responding you should see a long wait.  
