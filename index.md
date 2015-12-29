@@ -1,14 +1,20 @@
 <center><img width=300 src="images/pirateship.png"></center>
 
 # Pirateship for Pi
-A Raspberry Pi image for making deployment of Ground Servers a breeze in your sails. 
+A Raspberry Pi image for making deployment of Ground Servers a breeze (in your sails). 
 
-Download the latest Pirateship disk image for Raspberry Pi [[zip](http://pirate.sh/latest-pirateship.img.zip)] [[gz](http://pirate.sh/latest-pirateship.img.gz)]
+## Installation
 
-To install, download the latest image from the link above and then follow the directions to burn that disk image onto an SD Card. 
-- [Windows](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
-- [Mac](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
-- [Linux](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
+__Step 1__
+
+First you will need the software that we'll place on the SD Card for your Raspberry Pi. [Click here to download the latest Pirateship disk image for Raspberry Pi ](http://pirate.sh/latest-pirateship.img.zip).
+
+__Step 2__
+
+Now that you have the software, it's time to burn that software to an SD Card that you will later put in your Raspberry Pi. What you downloaded is referred to as a "Disk Image" or some times just referred to as an "Image". Disk images are entire hard drives in just one file. Here are some general instructions for burning a Disk Image to an SD Cards. 
+- [Burn a Disk Image to an SD Card using Microsoft Windows](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
+- [Burn a Disk Image to an SD Card using a Mac](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
+- [Burn a Disk Image to an SD Card using a Linux Machine](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
 
 ## Features
 ### Run code on boot off of a USB Drive with `autorun.sh`
